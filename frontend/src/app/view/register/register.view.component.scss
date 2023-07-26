@@ -1,0 +1,22 @@
+div.content {
+  display: flex;
+  justify-content: space-around;
+
+  mat-card-title {
+    margin: 1rem;
+  }
+
+  form {
+    width: 30rem;
+    .fields {
+      display: flex;
+      flex-direction: column;
+
+      mat-form-field {
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,6 @@
+<h1>PROTECTED</h1>
+<button mat-stroked-button (click)="fetchData()">Fetch protected data</button>
+<h2>Data from Server:</h2>
+<p *ngIf="protectedDataFromServer">
+  Your hero: {{protectedDataFromServer.name}}
+</p>

@@ -1,0 +1,21 @@
+div.content {
+  display: flex;
+  justify-content: space-around;
+
+  mat-card-title {
+    margin: 1rem;
+  }
+
+  form {
+    width: 30rem;
+  }
+
+  .btn-login {
+    margin-left: 0.5rem;
+  }
+
+  .btn-submit {
+    margin-left: 0.5rem;
+  }
+}
+

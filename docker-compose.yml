@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  fido_proxy:
+    container_name: fido_proxy
+    image: fido_proxy:latest
+    restart: always
+    links:
+      - "fido_frontend:frontend"
+      - "fido_backend:backend"
+    build:
+      context: ./deployment
+    ports:
+      - "127.0.0.1:80:80"
+      - "127.0.0.1:443:443"
+
+  fido_backend:
+    container_name: fido_backend
+    image: fido_backend:latest
+    restart: always
+    build:
+      context: ./backend
+    volumes:
+      - ./docker_volumes/backend/config:/usr/share/config
+    environment:
+      WAD_PORT: 8888
+      WAD_HOST: ""
+      WAD_KEYPATH: "/usr/share/config/key.pem"
+      WAD_MONGO_URI: "mongodb://never:use-it@fido_storage:27017"
+      WAD_REDIS_HOST: "fido_cache"
+      WAD_REDIS_PORT: 6379
+      WAD_REDIS_PASSWORD: "something_you_should_change"
+
+  fido_frontend:
+    container_name: fido_frontend
+    image: fido_frontend:latest
+    restart: always
+    build:
+      context: ./frontend
+
+  fido_storage:
+    container_name: fido_storage
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: never
+      MONGO_INITDB_ROOT_PASSWORD: use-it
+  
+  fido_cache:
+    container_name: fido_cache
+    image: redis:6.0.20-alpine
+    command: redis-server --save 20 1 --loglevel warning --requirepass something_you_should_change
+ 
+

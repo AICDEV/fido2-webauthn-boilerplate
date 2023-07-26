@@ -1,0 +1,8 @@
+/backend/.idea/
+.DS_Store
+/docker_volumes/
+/backend/config/
+/deployment/fido.workshop+4.pem
+/deployment/fido.workshop+4-key.pem
+docker-compose.local.yml
+.idea

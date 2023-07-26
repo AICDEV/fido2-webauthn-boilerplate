@@ -1,0 +1,5 @@
+<div *ngIf="(appState$ | async)?.user">
+  <span>You are logged in as: {{(appState$ | async)?.user?.firstName}} {{(appState$ | async)?.user?.lastName}}</span>
+</div>
+<label for="registerBtn">Register new key</label>
+<button id="registerBtn" mat-stroked-button (click)="registerNewKey()">Register</button>

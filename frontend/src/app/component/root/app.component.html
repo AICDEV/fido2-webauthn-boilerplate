@@ -1,0 +1,18 @@
+<nav>
+  <div class="spacer"></div>
+  <div class="menu-items">
+    <button mat-button routerLink="/main" routerLinkActive="active-route"> Main</button>
+    <button mat-button routerLink="/about" routerLinkActive="active-route">About us</button>
+    <button mat-button [disabled]="!(appState$ | async)?.loggedIn" routerLink="/admin" routerLinkActive="active-route">Admin</button>
+    <button mat-button [disabled]="!(appState$ | async)?.loggedIn" routerLink="/account" routerLinkActive="active-route">Account</button>
+  </div>
+  <div class="spacer"></div>
+  <button mat-button *ngIf="(appState$ | async)?.loggedIn" (click)="logout()">Logout</button>
+  <button mat-button class="btn-login" *ngIf="!(appState$ | async)?.loggedIn" routerLink="/login">Login/Register</button>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+
+

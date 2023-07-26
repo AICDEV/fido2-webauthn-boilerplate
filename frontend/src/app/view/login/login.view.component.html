@@ -1,0 +1,21 @@
+<div class="content" >
+  <mat-card>
+    <mat-card-title>Login with your E-Mail</mat-card-title>
+
+    <mat-card-content>
+      <form [formGroup]="loginForm">
+        <div class="fields">
+          <mat-form-field>
+            <mat-label>E-Mail</mat-label>
+            <input matInput placeholder="Email" formControlName="email" type="email">
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button class="btn-submit" mat-stroked-button routerLink="/register">Register</button>
+      <button class="btn-login" mat-stroked-button (click)="login()" [disabled]="loginForm.invalid">Login</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

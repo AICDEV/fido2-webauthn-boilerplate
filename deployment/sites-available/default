@@ -1,0 +1,40 @@
+upstream frontend {
+    server frontend;
+}
+
+upstream backend {
+    server backend:8888;
+}
+
+server {
+	listen 80;
+	server_name fido.workshop;
+
+	access_log /var/log/nginx/fido.workshop.http.access.log;
+	error_log /var/log/nginx/fido.workshop.http.error.log;
+	
+	return 301 https://$host$request_uri;
+}
+
+server {
+	listen 443 ssl;
+
+	server_name fido.workshop;
+
+	access_log /var/log/nginx/fido.workshop.tls.access.log;
+	error_log /var/log/nginx/fido.workshop.tls.error.log;
+
+	ssl_certificate /etc/nginx/certs/fido.workshop+4.pem;
+	ssl_certificate_key /etc/nginx/certs/fido.workshop+4-key.pem;
+	
+	include /etc/nginx/snippets/tls_config.conf;
+
+
+	location / {
+		proxy_pass http://frontend;
+	}
+
+    location /api {
+		proxy_pass http://backend;
+	}
+}

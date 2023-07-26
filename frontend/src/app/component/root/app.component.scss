@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightgray;
+  border-bottom: darkgray;
+  padding: 1rem;
+  margin-bottom: 3rem;
+
+  .spacer {
+    flex-grow: 1;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+    width: 30rem;
+  }
+
+  .menu-items > button {
+    width: 8rem;
+  }
+
+  .btn-login {
+    width: 8rem;
+    margin-right: 1rem;
+  }
+}
+
+.content {
+  margin: 2rem;
+}
