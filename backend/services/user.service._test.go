@@ -1,9 +1,10 @@
 package services_test
 
 import (
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/services"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/services"
+	"github.com/stretchr/testify/assert"
 )
 
 var (

@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/models"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/utils"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/models"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/utils"
 	"github.com/golang-jwt/jwt/v4"
 )
 

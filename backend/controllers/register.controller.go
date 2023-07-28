@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"sync"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/models"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/services"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/models"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/services"
 	"github.com/gin-gonic/gin"
 	"github.com/go-webauthn/webauthn/protocol"
 )

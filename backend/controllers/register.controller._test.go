@@ -8,8 +8,8 @@ import (
 	"os"
 	"testing"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/controllers"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/models"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/controllers"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/models"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 )

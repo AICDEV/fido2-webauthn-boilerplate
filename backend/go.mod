@@ -1,4 +1,4 @@
-module git.eon-cds.de/repos/dlab/wad-fido2/backend
+module github.com/aicdev/fido2-webauthn-boilerplate/backend
 
 go 1.20
 

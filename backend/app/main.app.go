@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"log"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/controllers"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/middleware"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/utils"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/controllers"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/middleware"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/utils"
 	"github.com/gin-gonic/gin"
 )
 

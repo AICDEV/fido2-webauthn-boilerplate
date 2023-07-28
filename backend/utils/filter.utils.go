@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strings"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/statics"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/statics"
 )
 
 func FilterStorageQuery(i string) string {

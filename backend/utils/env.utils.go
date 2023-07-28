@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/models"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/models"
 	"github.com/kelseyhightower/envconfig"
 )
 

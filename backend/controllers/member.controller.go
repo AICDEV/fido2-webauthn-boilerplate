@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/models"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/services"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/statics"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/storage"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/utils"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/models"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/services"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/statics"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/storage"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/utils"
 	"github.com/gin-gonic/gin"
 	"github.com/go-webauthn/webauthn/protocol"
 )

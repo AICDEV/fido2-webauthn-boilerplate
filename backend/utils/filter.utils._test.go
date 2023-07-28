@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/utils"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/utils"
 	"github.com/stretchr/testify/assert"
 )
 

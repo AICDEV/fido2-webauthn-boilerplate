@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/app"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/app"
 )
 
 func main() {

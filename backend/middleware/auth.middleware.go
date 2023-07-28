@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/services"
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/statics"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/services"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/statics"
 	"github.com/gin-gonic/gin"
 )
 
@@ -25,7 +25,6 @@ func LoadAuthMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		// TODO: validate token
 		err := services.GetAuthenticationServiceInstance().VerifyToken(token[1])
 
 		if err != nil {

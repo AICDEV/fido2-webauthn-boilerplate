@@ -5,7 +5,7 @@ import (
 	"log"
 	"sync"
 
-	"git.eon-cds.de/repos/dlab/wad-fido2/backend/utils"
+	"github.com/aicdev/fido2-webauthn-boilerplate/backend/utils"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
