@@ -23,16 +23,16 @@ export class LoginService {
     const resultSub = new Subject<AUTH_STATE>();
 
     // call 'https://fido.workshop/api/v1/service/authenticate/begin' with post request
-    // content type for response: WrappedPublicKeyCredentialRequestOptionsJSON
+    // content type for response: WrappedPublicKeyCredentialRequestOptionsJSON; @see app/model/types.ts
     /* post body: {
       email: email // the email property given to the login fn
     }
     */
 
-    // handle WrappedPublicKeyCredentialRequestOptionsJSON response
-    // map into CredentialRequestOptions
+    // handle WrappedPublicKeyCredentialRequestOptionsJSON response; @see app/model/types.ts
+    // map into CredentialRequestOptions which is needed for the navigator.credentials.get call
     // call navigator.credentials.get(options) with these CredentialRequestOptions
-    // create ILoginData from navigator.credentials.get result
+    // create ILoginData from navigator.credentials.get result; @see app/model/types.ts
     // call finalizeLogin fn with loginData
     // trigger resultSub.next with correct AUTH_STATE and complete the observable stream
 
@@ -42,8 +42,8 @@ export class LoginService {
 
   private finalizeLogin(loginData: ILoginData): Observable<boolean> {
     // POST call to 'https://fido.workshop/api/v1/service/authenticate/finish'
-    // body content is the given ILoginData
-    // response object is of type IFinalizeLoginResponse
+    // body content is the given ILoginData; @see app/model/types.ts
+    // response object is of type IFinalizeLoginResponse; @see app/model/types.ts
     // decode JWT from response
     // call this.appStateService.setUser with user metadata from token
     // store current JWT into app state via call to this.appStateService.setToken

@@ -27,11 +27,11 @@ export class RegisterService {
       email: mail,
     }
     * */
-    // return type of response IRegisterResponse
+    // return type of response IRegisterResponse; @see app/model/types.ts
 
     // map IRegisterResponse into options for navigator.credentials.create call
-    // perform navigator.credentials.create call with options
-    // create registerResponse (type RegistrationResponseJSON) from navigator.credentials.create response
+    // perform navigator.credentials.create call with these options
+    // create registerResponse (type RegistrationResponseJSON) from navigator.credentials.create fn call response
     // do POST call to 'https://fido.workshop/api/v1/service/signup/finish' with registerResponse as body
     // trigger result$.next according to success or error with AUTH_STATE and complete the stream
 
@@ -39,14 +39,14 @@ export class RegisterService {
   }
 
   private createFinalRegistrationValidationData(credentialInfo: RegistrationCredential): RegistrationResponseJSON  {
-    // map credentialInfo to RegistrationResponseJSON
+    // map credentialInfo parameter into RegistrationResponseJSON; @see app/model/types.ts
 
     // replace me... placeholder so it compiles
     return { } as any as RegistrationResponseJSON;
   }
 
   private credentialCreateWithRegisterResponse(registerResponse: IRegisterResponse): Promise<RegistrationCredential | null> {
-    // map registerResponse to navigator.credentials.create options call it and return the Promise to the result
+    // map registerResponse parameter to navigator.credentials.create options call it and return the Promise to the result
 
     // replace me... placeholder so it compiles
     return lastValueFrom(of(null));
@@ -56,9 +56,9 @@ export class RegisterService {
     const result$ = new Subject<AUTH_STATE>();
 
     // POST call to 'https://fido.workshop/api/v1/member/register/device/begin'
-    // body undefined
+    // body is undefined
     // headers with bearer token which you can get by calling this.appStateService.getRawToken()
-    // response type IRegisterResponse
+    // response type IRegisterResponse; @see app/model/types.ts
 
     // call credentialCreateWithRegisterResponse fn to map registerResponse to navigator.credentials.create options call it and return the Promise to the result
     // map result into registerResponse of type RegistrationResponseJSON
