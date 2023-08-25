@@ -11,7 +11,7 @@ import {
 } from '../model/types';
 import { SnackbarService } from './snackbar.service';
 import { AppStateService } from './appstate.service';
-import jwtDecode, { JwtPayload } from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 
 
 @Injectable({
